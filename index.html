@@ -8,17 +8,14 @@
   <style>
     :root {
       --bg: #020617;
-      --bg-soft: #050816;
       --accent: #f97316;
-      --accent-soft: rgba(249, 115, 22, 0.18);
+      --accent-soft: rgba(249, 115, 22, 0.2);
       --text: #f9fafb;
       --muted: #9ca3af;
       --card: #020617;
       --border: #1f2937;
     }
-    * {
-      box-sizing: border-box;
-    }
+    * { box-sizing: border-box; }
     body {
       margin: 0;
       font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
@@ -28,9 +25,8 @@
       color: var(--text);
       line-height: 1.6;
     }
-    a {
-      color: inherit;
-    }
+    a { color: inherit; }
+
     .shell {
       max-width: 1000px;
       margin: 0 auto;
@@ -39,13 +35,13 @@
 
     /* HEADER / HERO */
     header {
-      padding: 40px 0 30px;
+      padding: 40px 0 24px;
       text-align: center;
     }
     .logo-word {
       letter-spacing: 0.28em;
       text-transform: uppercase;
-      font-size: 2.4rem;
+      font-size: 2.3rem;
       margin: 0 0 6px;
     }
     .tagline {
@@ -54,14 +50,15 @@
       font-size: 0.8rem;
       color: var(--muted);
     }
+
     .hero-card {
-      margin-top: 32px;
-      padding: 28px 22px;
+      margin-top: 30px;
+      padding: 24px 22px;
       border-radius: 18px;
       border: 1px solid var(--border);
       background:
         radial-gradient(circle at top left, var(--accent-soft), transparent 55%),
-        radial-gradient(circle at bottom right, rgba(59,130,246,0.2), transparent 60%),
+        radial-gradient(circle at bottom right, rgba(59,130,246,0.22), transparent 60%),
         linear-gradient(135deg, #020617, #020617 50%, #020617);
       display: grid;
       grid-template-columns: minmax(0, 2fr);
@@ -69,16 +66,16 @@
     }
     @media (min-width: 768px) {
       .hero-card {
-        grid-template-columns: minmax(0, 2fr) minmax(0, 1.35fr);
+        grid-template-columns: minmax(0, 2fr) minmax(0, 1.3fr);
         align-items: center;
       }
     }
     .hero-text h1 {
-      font-size: 2rem;
+      font-size: 1.9rem;
       margin: 0 0 8px;
     }
     .hero-text p {
-      margin: 0 0 16px;
+      margin: 0 0 14px;
       color: var(--muted);
     }
     .pill {
@@ -91,7 +88,7 @@
       border: 1px solid rgba(156,163,175,0.5);
       color: var(--muted);
       margin-bottom: 10px;
-      background: rgba(15,23,42,0.8);
+      background: rgba(15,23,42,0.85);
     }
     .pill-dot {
       width: 7px;
@@ -104,7 +101,7 @@
       display: flex;
       flex-wrap: wrap;
       gap: 10px;
-      margin-top: 10px;
+      margin-top: 8px;
     }
     .btn {
       display: inline-flex;
@@ -129,57 +126,56 @@
       background: transparent;
       color: var(--text);
     }
-    .cover-placeholder {
+
+    .cover-art-box {
       border-radius: 14px;
       border: 1px solid var(--border);
-      aspect-ratio: 1 / 1;
+      background: #020617;
+      padding: 8px;
       display: flex;
-      align-items: center;
-      justify-content: center;
       flex-direction: column;
-      font-size: 0.8rem;
-      color: var(--muted);
-      background:
-        radial-gradient(circle at top, #1f2937, #020617);
-      padding: 18px;
+      gap: 6px;
+      align-items: stretch;
     }
-    .cover-title {
-      font-size: 0.9rem;
-      text-transform: uppercase;
-      letter-spacing: 0.16em;
-      margin-bottom: 4px;
+    .cover-art-img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+      display: block;
     }
-    .cover-sub {
-      font-size: 0.7rem;
+    .cover-caption {
+      font-size: 0.75rem;
       text-transform: uppercase;
       letter-spacing: 0.18em;
+      color: var(--muted);
+      text-align: center;
     }
 
-    /* MAIN SECTIONS */
+    /* MAIN LAYOUT */
     main {
-      margin-top: 42px;
+      margin-top: 36px;
       display: grid;
-      gap: 26px;
+      gap: 24px;
     }
     section {
       border-radius: 18px;
       border: 1px solid var(--border);
-      background: rgba(15,23,42,0.78);
-      padding: 22px 20px 20px;
+      background: rgba(15,23,42,0.86);
+      padding: 20px 20px 18px;
     }
     section h2 {
-      font-size: 1.05rem;
+      font-size: 1rem;
       text-transform: uppercase;
       letter-spacing: 0.16em;
-      margin: 0 0 10px;
+      margin: 0 0 8px;
     }
     section p {
-      margin: 0 0 10px;
+      margin: 0 0 8px;
       color: var(--muted);
       font-size: 0.92rem;
     }
 
-    /* WHERE TO LISTEN */
+    /* LISTEN SECTION */
     .listen-links {
       margin-top: 8px;
       display: flex;
@@ -202,18 +198,24 @@
       border-color: var(--accent);
     }
 
+    .spotify-embed {
+      margin-top: 14px;
+      border-radius: 12px;
+      overflow: hidden;
+    }
+
     /* BAND PHOTO SECTION */
     .photo-section {
       text-align: center;
     }
     .photo-section p {
-      max-width: 520px;
-      margin: 0 auto 14px;
+      max-width: 480px;
+      margin: 0 auto 12px;
     }
     .band-photo {
       max-width: 700px;
       width: 100%;
-      height: auto; /* no crop */
+      height: auto;
       border-radius: 18px;
       border: 1px solid var(--border);
       display: block;
@@ -221,10 +223,10 @@
       box-shadow: 0 18px 40px rgba(0, 0, 0, 0.6);
     }
 
-    /* TWO-COL SECTION */
+    /* TWO-COL */
     .two-col {
       display: grid;
-      gap: 16px;
+      gap: 14px;
     }
     @media (min-width: 768px) {
       .two-col {
@@ -238,16 +240,22 @@
       font-size: 0.9rem;
       color: var(--muted);
     }
-    .list li {
-      margin-bottom: 4px;
-    }
+    .list li { margin-bottom: 4px; }
 
     /* FOOTER */
     footer {
       text-align: center;
       font-size: 0.78rem;
       color: var(--muted);
-      padding: 32px 0 10px;
+      padding: 30px 0 10px;
+    }
+    .footer-email {
+      margin-top: 6px;
+      font-size: 0.8rem;
+      letter-spacing: 0.06em;
+    }
+    .footer-email a {
+      text-decoration: none;
     }
   </style>
 </head>
@@ -265,8 +273,7 @@
           </div>
           <h1>From the pit to the promise.</h1>
           <p>
-            Dead to Risen lives in the tension between breakdowns and breakthrough —
-            big guitars, raw confession, and a hope that doesn’t let go.
+            Loud guitars. Honest lyrics. Songs about falling apart and finding real hope.
           </p>
           <div class="hero-buttons">
             <a href="https://open.spotify.com/artist/4TD3DLSd3REDO5IAX5Pxu8?si=hylIIoYHSlydaMCF9g4UHw"
@@ -275,39 +282,29 @@
             </a>
             <a href="https://open.spotify.com/artist/4TD3DLSd3REDO5IAX5Pxu8?si=hylIIoYHSlydaMCF9g4UHw"
                class="btn btn-outline" target="_blank">
-              Follow Dead to Risen
+              Follow on Spotify
             </a>
           </div>
         </div>
-        <div class="cover-placeholder">
-          <div class="cover-title">Dead to Risen</div>
-          <div class="cover-sub">debut singles</div>
-          <div style="margin-top: 10px; font-size: 0.7rem; text-align:center; max-width: 180px;">
-            Swap this block later with your official cover art or logo.
+
+        <!-- COVER ART BLOCK -->
+        <div class="cover-art-box">
+          <img src="Cover photo.jpeg"
+               alt="Dead to Risen cover art"
+               class="cover-art-img" />
+          <div class="cover-caption">
+            Latest single · Dead to Risen
           </div>
         </div>
       </div>
     </header>
 
     <main>
+      <!-- LISTEN SECTION -->
       <section>
-        <h2>About the project</h2>
+        <h2>Listen</h2>
         <p>
-          Dead to Risen is a Christian rock project built on real stories:
-          doubt, relapse, late-night drives, and the kind of grace that keeps
-          chasing you anyway.
-        </p>
-        <p>
-          The songs hit hard but stay honest — mixing modern rock, subtle metal
-          edges, and lyrics that point straight back to the cross.
-        </p>
-      </section>
-
-      <section>
-        <h2>Where to listen</h2>
-        <p>
-          Find Dead to Risen on your go-to platforms. Save the songs, add them to your
-          playlists, and share them with someone who needs a lifeline.
+          Stream Dead to Risen on your favorite platform.
         </p>
         <div class="listen-links">
           <a href="https://open.spotify.com/artist/4TD3DLSd3REDO5IAX5Pxu8?si=hylIIoYHSlydaMCF9g4UHw" target="_blank">
@@ -323,49 +320,53 @@
             YouTube
           </a>
         </div>
+
+        <!-- Spotify artist embed: auto-updates with top tracks -->
+        <div class="spotify-embed">
+          <iframe style="border-radius:12px"
+                  src="https://open.spotify.com/embed/artist/4TD3DLSd3REDO5IAX5Pxu8?utm_source=generator"
+                  width="100%" height="160" frameborder="0"
+                  allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                  loading="lazy"></iframe>
+        </div>
       </section>
 
       <!-- BAND PHOTO SECTION -->
       <section class="photo-section">
         <h2>The band</h2>
         <p>
-          Faces to the name — Dead to Risen is built on real people, real stories,
-          and a Savior who doesn’t walk away.
+          Dead to Risen is about real people, real mess, and a Savior who doesn’t walk away.
         </p>
-        <img src="dead-to-risen-band.png"
+        <img src="dead-to-risen-band.PNG"
              alt="Dead to Risen band in front of a cross"
              class="band-photo" />
       </section>
 
+      <!-- SHORT ABOUT / VIBE -->
       <section class="two-col">
         <div>
-          <h2>For fans of</h2>
+          <h2>What it sounds like</h2>
           <ul class="list">
-            <li>Big riffs with real lyrics</li>
-            <li>Faith-based rock that actually goes hard</li>
-            <li>Songs for late-night drives and long roads back home</li>
+            <li>Big guitars with heart.</li>
+            <li>Lyrics that talk about doubt and grace.</li>
+            <li>Songs for late drives, long nights, and starting over.</li>
           </ul>
         </div>
         <div>
-          <h2>What’s coming</h2>
+          <h2>What it’s about</h2>
           <p>
-            More singles, deeper cuts, and maybe a full EP built around the
-            journey from dead to alive. This is just the start.
+            These songs sit in the middle of the tension — between who we were and who
+            we’re called to be. Heavy, honest, and aimed straight at hope.
           </p>
         </div>
-      </section>
-
-      <section>
-        <h2>Stay connected</h2>
-        <p>
-          Search for “Dead to Risen” on your favorite music platform and hit follow
-          so you don’t miss the next release.
-        </p>
       </section>
     </main>
 
     <footer>
-      © <span id="year"></span> Dead to Risen. All rights reserved.
+      <div>© <span id="year"></span> Dead to Risen. All rights reserved.</div>
+      <div class="footer-email">
+        contact: <a href="mailto:contact@deadtorisen.com">contact@deadtorisen.com</a>
+      </div>
     </footer>
   </div>
 
