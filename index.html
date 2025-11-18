@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dead to Risen</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: #050509;
+      color: #f7f7f7;
+    }
+    header {
+      text-align: center;
+      padding: 120px 20px 80px;
+      background: radial-gradient(circle at top, #3e1f47, #050509 60%);
+    }
+    h1 {
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      font-size: 2.8rem;
+      margin-bottom: 10px;
+    }
+    h2 {
+      font-size: 1.6rem;
+      margin-bottom: 8px;
+    }
+    p {
+      max-width: 650px;
+      margin: 0 auto 1rem;
+    }
+    .tagline {
+      font-size: 1rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      opacity: 0.85;
+    }
+    section {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+    .listen-links {
+      margin-top: 16px;
+    }
+    .listen-links a {
+      display: inline-block;
+      margin: 8px 10px;
+      padding: 10px 18px;
+      border-radius: 999px;
+      border: 1px solid #f7f7f7;
+      text-decoration: none;
+      color: #f7f7f7;
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+    }
+    .listen-links a:hover {
+      background: #f7f7f7;
+      color: #050509;
+    }
+    footer {
+      text-align: center;
+      padding: 40px 0 30px;
+      font-size: 0.8rem;
+      opacity: 0.6;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Dead to Risen</h1>
+    <div class="tagline">Christian rock • heavy, honest, redeemed</div>
+  </header>
+
+  <section>
+    <h2>About</h2>
+    <p>
+      Dead to Risen is a Christian rock project built on big guitars, real
+      struggle, and a hope that doesn’t let go. These songs sit in the
+      tension — between who we were and who we’re called to be.
+    </p>
+  </section>
+
+  <section>
+    <h2>Listen</h2>
+    <p>Find Dead to Risen on your favorite platforms:</p>
+    <div class="listen-links">
+      <a href="#" target="_blank">Spotify</a>
+      <a href="#" target="_blank">Apple Music</a>
+      <a href="#" target="_blank">YouTube</a>
+    </div>
+  </section>
+
+  <section>
+    <h2>Latest Release</h2>
+    <p>
+      New tracks are rolling out — heavy riffs, honest lyrics, and songs
+      built for both late-night drives and loud speakers.
+    </p>
+  </section>
+
+  <footer>
+    © <span id="year"></span> Dead to Risen. All rights reserved.
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
